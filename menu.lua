@@ -4,7 +4,7 @@ menu = {
 
 function menu:init()
    self.state = 0;
-   self.bg_menu = love.graphics.newImage("assets/menu_bg.png");
+   self.bg_menu = love.graphics.newImage("assets/bg.png");
 
    self.buttons = {};
    
