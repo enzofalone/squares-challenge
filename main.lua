@@ -1,10 +1,13 @@
-require "collision"
-require "menu"
-require "game"
+require "src/collision"
+require "src/menu"
+require "src/ents/player"
+require "src/game"
+
 function love.load()
    
    menu:init();
    print(menu.state);
+   love.graphics.setBackgroundColor(162,231,177);
 end
 
 function love.update(dt)
