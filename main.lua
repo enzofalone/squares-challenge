@@ -31,3 +31,9 @@ function love.mousepressed(x, y, button, istouch)
       menu:mousepressed(x, y, button, istouch);
    end
 end
+
+function love.keypressed(key, scancode, isrepeat)
+    if(key == "escape") then
+        love.event.push("quit");
+    end
+end

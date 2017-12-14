@@ -10,10 +10,38 @@ function player:init()
 
    self.xd = 0;
    self.yd = 0;
+
+   self.spd = 400
 end
 
 function player:update(dt)
-   
+    --move the player in four directions
+   left = love.keyboard.isDown("left");
+   right = love.keyboard.isDown("right");
+   up = love.keyboard.isDown("up");
+   down = love.keyboard.isDown("down");
+
+   if(left) then
+      self.xd = -self.spd * dt;
+   end
+
+   if(right) then
+      self.xd = self.spd * dt;
+   end
+
+   if(up) then
+      self.yd = -self.spd * dt;
+   end
+
+   if(down) then
+      self.yd = self.spd * dt;
+   end
+
+   self.x = self.x + self.xd;
+   self.y = self.y + self.yd;
+   --set next positions to 0
+   self.yd = 0;
+   self.xd = 0;
 end
 
 function player:draw()

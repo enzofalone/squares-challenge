@@ -5,7 +5,7 @@ function game:init()
    player:init();
 end
 
-function game:update()
+function game:update(dt)
    player:update(dt);
 end
 
