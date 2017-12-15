@@ -4,7 +4,7 @@ function player:init()
 
    self.w = 16;
    self.h = self.w;
-   
+
    self.x = love.graphics.getWidth() / 2 - self.w/2;
    self.y = love.graphics.getHeight() / 2 - self.w/2;
 
@@ -39,7 +39,7 @@ function player:update(dt)
 
    self.x = self.x + self.xd;
    self.y = self.y + self.yd;
-   --set next positions to 0
+   --set next positions to 0 to make sure the object won't move while the keys aren't pressed
    self.yd = 0;
    self.xd = 0;
 end
